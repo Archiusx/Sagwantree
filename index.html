@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Majestic Sagwan tree🌳</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+    html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-padding {
+      padding: 20px 0;
+    }
+
+    .bg-light {
+      background-color: #eaf6e1;
+    }
+
+    header {
+  background: #386641;
+  color: #fff;
+  padding: 0.3rem 0; /* reduced from 1rem */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+ header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4em; /* reduced from 1.8em */
+}
+
+    header h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em; 
+  position: relative;
+}
+
+    nav ul li a:hover {
+      color: #a3b899;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMII6iXMzE-meEFqT-kvNkL1iRhe2vQvNdQ9zMB6L3IegruYZtNpVPa4a8&s=10') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 650px;
+      padding: 180px 15px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #386641;
+      font-size: 3em;
+      position: relative;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background-color: #6a9955;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+    }
+
+    h4 {
+      font-family: 'Playfair Display', serif;
+      color: #6a9955;
+      font-size: 1.6em;
+      margin-bottom: 15px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .feature-item {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: justify;
+      transition: all 0.4s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .feature-item ul li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .feature-item ul li:before {
+      content: "🍃";
+      position: absolute;
+      left: 0;
+    }
+
+    #names p {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    #names em {
+      color: #386641;
+    }
+
+    #facts ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #facts ul li {
+      background-color: #fff;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    #facts ul li:before {
+      content: '🌿';
+      font-size: 1.5em;
+      margin-right: 10px;
+      color: #6a9955;
+    }
+
+    #facts ul li strong {
+      color: #386641;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery-note {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    footer {
+      background: #386641;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1><a href="#home">Majestic Sagwan Tree🌳</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#environment">Environment</a></li>
+          <li><a href="#medicinal">Medicinal Uses</a></li>
+          <li><a href="#facts">Fun Facts</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Explore the legacy and strength of the magnificent Sagwan (Teak) Tree — nature's gift of durability and grace.</h2>
+    <p>Known for its unmatched wood quality and deep ecological impact, the Sagwan Tree stands tall through centuries.</p>
+  </div>
+</section>
+
+<section id="names" class="section-padding bg-light">
+  <div class="container">
+    <h3>Scientific and Common Names</h3>
+    <p>• Scientific Name: <em>Tectona grandis</em></p>
+    <p>• Common Names: Sagwan Tree, Teak Tree</p>
+  </div>
+</section>
+
+<section id="about" class="section-padding">
+  <div class="container">
+
+    <h3>Know About Our Tree: Sagwan (Teak) Tree Features</h3>
+    <div class="content-grid">
+      <div class="feature-item">
+        <h4>Leaves</h4>
+        <p>Large, ovate, and rough-textured — can grow up to 60 cm long.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Bark</h4>
+        <p>Grey to brown, exfoliating in thin scales as the tree matures.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Height</h4>
+        <p>Reaches heights of 30 to 40 meters under ideal conditions.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Lifespan</h4>
+        <p>Typically lives 100–150 years but can last longer in good environments.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Wood</h4>
+        <p>Golden to dark brown, oily, highly durable, and naturally water-resistant.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </section>
+
+<section id="sagwan-pdf" class="pdf-viewer" style="padding: 2rem; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Sagwan Tree Story</h2>
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); max-width: 900px; margin: 0 auto;">
+    <iframe 
+      src="https://drive.google.com/file/d/1rw7aXY_pjSRaZXpyApCyMsn_z5e3SWPy/preview" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+      allowfullscreen 
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
+  </div>
+</section>
+
+<section id="medicinal" class="section-padding">
+  <div class="container">
+    <h3>Medicinal and Traditional Uses</h3>
+    <div class="content-grid">
+      <div class="feature-item">
+        <h4>Bark</h4>
+        <p>Decoction used to treat headaches, fever, skin diseases, and indigestion in traditional medicine.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Leaves</h4>
+        <p>Used in folk remedies for treating diabetes, bronchitis, and inflammation.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Flowers</h4>
+        <p>Used in traditional preparations for bronchial issues and mild infections.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Oil Extract</h4>
+        <p>Applied for eczema, skin irritations, and as a mild antiseptic.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Traditional Uses</h4>
+        <p>Widely used in furniture, temples, boats, and traditional homes across South and Southeast Asia.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Key Compounds</h4>
+        <ul>
+          <li>Tectoquinone</li>
+          <li>Flavonoids</li>
+          <li>Phenolic Compounds</li>
+          <li>Natural Oils</li>
+          <li>Lignin & Silica</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="video" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px;">
+      🌿 Importance of the Peepal Tree – Video Insight
+    </h2>
+    <div style="width: 320px; height: 180px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+      <iframe
+        src="https://www.youtube.com/embed/ewEtS8IBb1Y"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="width: 100%; height: 100%; border: none;"
+        title="Importance of the Peepal Tree"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="environment" class="section-padding bg-light">
+  <div class="container">
+    <h3>Sagwan Tree: Environmental Impact</h3>
+    <div class="content-grid">
+      <div class="feature-item">
+        <h4>Carbon Sequestration</h4>
+        <p>Teak plantations absorb significant amounts of CO₂, helping to mitigate climate change.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Soil Improvement</h4>
+        <p>Fallen leaves decompose slowly, adding organic matter and enhancing soil quality.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Water Management</h4>
+        <p>Deep root systems aid in groundwater recharge but overplanting can deplete local water resources.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Biodiversity</h4>
+        <p>Natural teak forests support biodiversity, though monoculture plantations may reduce local species richness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facts" class="section-padding">
+  <div class="container">
+    <h3>Fun Facts and Myths</h3>
+    <ul>
+      <li><strong>Durability Legend:</strong> Teak wood’s strength made it the preferred choice for Dutch and British naval shipbuilding.</li>
+      <li><strong>Ancient Plantations:</strong> The Nilambur Teak Plantation in Kerala, India, is one of the world’s oldest teak forests.</li>
+      <li><strong>Natural Oils:</strong> Teak contains oils that make it water-resistant and termite-proof, giving it a unique scent and texture.</li>
+      <li><strong>Spiritual Beliefs:</strong> In some cultures, teak trees are thought to ward off evil spirits and are considered auspicious near homes.</li>
+      <li><strong>Mythical Spirits:</strong> Ancient Southeast Asian texts suggest spirits inhabit old teak trees, and cutting them without rituals may bring bad luck.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gallery" class="section-padding bg-light">
+  <div class="container">
+    <h3>Gallery</h3>
+    <div class="image-gallery" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <img src="https://www.apnikheti.com/upload/crops/5578idea99sagwan.jpg" alt="Sagwan tree full view" style="width: 250px; height: auto; border-radius: 15px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrMMRX3mPww0LBI94Fsfxf3Rt8MtJXw_FTZvRHxgbYZ5KnFZQpw_xpAPw&s=10" alt="Sagwan tree bark" style="width: 250px; height: auto; border-radius: 15px;">
+      <img src="https://m.media-amazon.com/images/I/41ir6zkvkOL.jpg" alt="Sagwan tree leaves" style="width: 250px; height: auto; border-radius: 15px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeGiD5V5SJtGcr60etHaCkzkm4es8ziz2NyFVU-KyJUPXjXPwf3Sm2R6k&s=10" alt="Sagwan wood sample" style="width: 250px; height: auto; border-radius: 15px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnnGCzwT1L3vNcdMgdqAbBDuF6-r3rdahipcEjcVFY9CvNCTfibaoD-k-&s=10" alt="Sagwan tree close up" style="width: 250px; height: auto; border-radius: 15px;">
+    </div>
+    <p class="gallery-note" style="text-align: center; margin-top: 15px; font-style: italic;">Thanks for visiting 🫶! Save Trees, Save Life 🌿</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 <strong>The Timeless Sagwan Tree 🌳</strong>. All rights reserved.</p>
+    <p>Let’s cherish, protect, and learn from this majestic tree for the benefit of nature and future generations.</p>
+  </div>
+</footer>
+      <p>Energy and Environment Cell, BIT Wardha</p>
+    </div>
+<footer style="text-align: center; font-size: 10px; color: #888; padding: 10px;">
+  Developed by Piyush Deshkar
+</footer>
+
+</body>
+  </html>
